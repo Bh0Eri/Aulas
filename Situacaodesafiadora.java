@@ -1,7 +1,7 @@
 import java.lang.String;
 import java.util.Scanner;
 
-public class Situacaodesafiadora {
+public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -146,18 +146,15 @@ public class Situacaodesafiadora {
                 System.out.println("Digite certo, Repetindo...");
             }
         }
-        System.out.println("seu salario bruto é: "+salariobruto+"R$");
         System.out.printf("Seus descontos são:%n");
         System.out.println(inss+ " desconto do Inss");
-        System.out.println(ir+" De Imposto de renda");
-        System.out.println(vr+" De vale refeição");  
-        System.out.println(va+" De vale alimentação");     
+
         System.out.println(saude+" De saúde");
         System.out.println(vt+ " Vale transporte");
 
 
         salarioliquido = salariobruto - (vr + va + vt + saude + inss + ir);
-        System.out.printf("%nSeu salário liquído será de: R$ %.2f%n", salarioliquido,"R$");
+        System.out.printf("%nSeu salário liquído será de: R$ %.2f%n", salarioliquido);
 
     }
 }
