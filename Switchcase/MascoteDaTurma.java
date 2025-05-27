@@ -1,3 +1,5 @@
+package Switchcase;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -88,14 +90,17 @@ public class MascoteDaTurma {
             }else {
                 System.out.println("Erro...");
             }
-
-
         }
+
+        System.out.println("Quantidade de voto total: " + votototal);
+        System.out.println("");
+
         for (int i =0; i<mascote.length; i++) {
             for (int j = 0; j < mascote[i].length; j++) {
                 System.out.println(mascote[i][j]);
             }
         }
+        sc.close();
     }
 
 }
