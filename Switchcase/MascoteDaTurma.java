@@ -73,11 +73,11 @@ public class MascoteDaTurma {
 
                 }
 
-                mascote[0][1]= String.valueOf(voto_Lyan);
-                mascote[1][1]= String.valueOf(voto_Eric);
-                mascote[2][1]= String.valueOf(voto_Luciano);
-                mascote[3][1]= String.valueOf(voto_Felipe);
-                mascote[4][1]= String.valueOf(voto_Bernado);
+                mascote[0][1]= String.valueOf((voto_Lyan*100)/votototal);
+                mascote[1][1]= String.valueOf((voto_Eric*100)/votototal);
+                mascote[2][1]= String.valueOf((voto_Luciano*100)/votototal);
+                mascote[3][1]= String.valueOf((voto_Felipe*100)/votototal);
+                mascote[4][1]= String.valueOf((voto_Bernado*100)/votototal);
 
             } while (opcao != -1);
             System.out.println("Outra pessoa vai votar? digite 0 para sair e 1 para continuar");
@@ -95,9 +95,11 @@ public class MascoteDaTurma {
         System.out.println("Quantidade de voto total: " + votototal);
         System.out.println("");
 
+
         for (int i =0; i<mascote.length; i++) {
             for (int j = 0; j < mascote[i].length; j++) {
-                System.out.println(mascote[i][j]);
+                System.out.println(mascote[i][j]+"%");
+
             }
         }
         sc.close();
