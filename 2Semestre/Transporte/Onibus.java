@@ -1,6 +1,7 @@
 package Transporte;
 
-class Onibus extends Veiculos{
+class Onibus extends Bicicleta {
+
     public float calcularTempo(float distancia, int parada) {
         this.distancia = distancia;
         float tempo = (distancia / 60) + (parada*15);
