@@ -7,6 +7,13 @@ abstract class Conta {
     private String titular;
     private double saldo;
 
+    public Conta(int numero, String agencia, String titular, double saldo) {
+        this.numero = numero;
+        this.agencia = agencia;
+        this.titular = titular;
+        this.saldo = saldo;
+    }
+
     public int getNumero() {
         return numero;
     }
@@ -27,8 +34,9 @@ abstract class Conta {
         return saldo;
     }
 
-    public void setSaldo(double saldo) {
+    public double setSaldo(double saldo) {
         this.saldo = saldo;
+        return saldo;
     }
 
     public String getTitular() {
@@ -45,6 +53,5 @@ abstract class Conta {
 
     abstract void exibirsaldo();
 
-    abstract void calcularTarifaMensal();
-
+    public abstract double CalcularTarifaMensal();
 }
